@@ -3,10 +3,13 @@ using Retro.ReadOnlyParams.Annotations;
 
 namespace Retro.ReadOnlyParams.Sample;
 
-public class Spaceship {
+public class Spaceship([ReadOnly] long maxSpeed) {
   public void SetSpeed([ReadOnly] long speed) {
-    speed = 4;
-    if (speed > 299_792_458)
+    if (speed > maxSpeed) {
+      // Uncomment this line to trigger the analyzer
+      //maxSpeed = speed;
       throw new ArgumentOutOfRangeException(nameof(speed));
+    }
+
   }
 }
