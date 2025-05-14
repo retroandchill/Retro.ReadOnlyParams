@@ -6,7 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Retro.ReadOnlyParams.csproj"
+        <ProjectReference Include="..\..\src\Retro.ReadOnlyParams.Annotations\Retro.ReadOnlyParams.Annotations.csproj" />
+        <ProjectReference Include="..\..\src\Retro.ReadOnlyParams\Retro.ReadOnlyParams.csproj"
                           OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
     </ItemGroup>
 
